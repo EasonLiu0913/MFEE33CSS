@@ -20,8 +20,12 @@
 
         .cube {
             transform-style: preserve-3d;
+            transition: 2s;
+            /* animation: rotateY 10s linear infinite; */
+        }
 
-            transform: rotateX(0deg);
+        .cube:hover {
+            transform: rotate3d(0, 0, 1, 360deg);
         }
 
         .box {
@@ -31,23 +35,54 @@
         }
 
         .left {
-            background-color: #faf;
-            transform: rotateY(-90deg) translateZ(100px);
+            background-color: rgba(255, 170, 255, 0.514);
+            transform: rotateY(-90deg) translateZ(150px);
         }
 
         .right {
-            background-color: #faa;
-            transform: rotateY(90deg) translateZ(100px);
+            background-color: rgba(255, 170, 170, 0.479);
+            transform: rotateY(90deg) translateZ(150px);
         }
 
         .top {
-            background-color: #aff;
-            transform: rotateX(90deg) translateZ(100px);
+            background-color: rgba(170, 255, 255, 0.512);
+            transform: rotateX(90deg) translateZ(150px);
         }
 
         .bottom {
-            background-color: #afa;
-            transform: rotateX(-90deg) translateZ(100px);
+            background-color: rgba(170, 255, 170, 0.487);
+            transform: rotateX(-90deg) translateZ(150px);
+        }
+
+        .back {
+            background-color: rgba(170, 170, 255, 0.486);
+            transform: rotateY(180deg) translateZ(150px);
+            /* backface-visibility: hidden; */
+        }
+
+        .front {
+            background-color: rgba(255, 255, 170, 0.514);
+            transform: translateZ(150px);
+        }
+
+        @keyframes rotateY {
+            0% {
+                transform: rotateY(0deg);
+            }
+
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+
+        @keyframes rotateX {
+            0% {
+                transform: rotateX(0deg);
+            }
+
+            100% {
+                transform: rotateX(360deg);
+            }
         }
     </style>
 </head>
@@ -60,6 +95,8 @@
             <div class="box right">右</div>
             <div class="box top">上</div>
             <div class="box bottom">下</div>
+            <div class="box back">後</div>
+            <div class="box front">前</div>
         </div>
     </div>
 </body>
