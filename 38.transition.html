@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #aaf;
+            /* transition: width 5s ease 2s, height 2s linear; */
+            transition: all 5s cubic-bezier(.3, -1.29, .8, 2.1);
+            /* opacity: 1; */
+            /* display: block; */
+            /* visibility: visible; */
+        }
+
+        .box:hover {
+            width: 500px;
+            height: 500px;
+            background-color: #faa;
+            /* opacity: 0; */
+            /* display: none; */
+            /* visibility: hidden; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>
