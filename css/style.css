@@ -1,0 +1,55 @@
+.circle1 {
+  stroke-dasharray: 1194;
+  stroke-dashoffset: 1194;
+  -webkit-animation: identifier 2s linear both;
+          animation: identifier 2s linear both;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+}
+.box:hover {
+  width: 400px;
+  height: 400px;
+}
+.box .tick {
+  stroke-dasharray: 310;
+  stroke-dashoffset: 310;
+  -webkit-animation: tick-animation 2s linear 1.9s both;
+          animation: tick-animation 2s linear 1.9s both;
+}
+
+@-webkit-keyframes identifier {
+  0% {
+    stroke-dashoffset: 1194;
+  }
+  100% {
+    stroke-dashoffset: 2388;
+  }
+}
+
+@keyframes identifier {
+  0% {
+    stroke-dashoffset: 1194;
+  }
+  100% {
+    stroke-dashoffset: 2388;
+  }
+}
+@-webkit-keyframes tick-animation {
+  0% {
+    stroke-dashoffset: 310;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes tick-animation {
+  0% {
+    stroke-dashoffset: 310;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}/*# sourceMappingURL=style.css.map */
